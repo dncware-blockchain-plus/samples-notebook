@@ -1,0 +1,7 @@
+*.swp
+*.exe
+node_modules
+.ipynb_checkpoints
+etc/*.json
+wallets/*.json
+jupyter/javascript/*.json
