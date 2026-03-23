@@ -1,11 +1,16 @@
 // specification: https://jupyter-client.readthedocs.io/en/stable/messaging.html
 
 var fs = require('fs');
+var path = require('path');
 var util = require('util');
 var crypto = require('crypto');
 var zeromq = require('zeromq');
 var { v4: uuid } = require('uuid');
 var Runner = require('./nodejs-runner.js');
+
+// Set cwd to kernel directory so that notebook relative imports (e.g. '../lib/...')
+// resolve correctly against the project structure.
+process.chdir(__dirname);
 
 const protocol_version = '5.3';
 const package_version = require('../package.json').version;
