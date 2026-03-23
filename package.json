@@ -1,6 +1,6 @@
 {
     "name": "dncware-blockchain-plus-samples-notebook",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "dependencies": {
         "app-root-path": "^3.1.0",
         "https-proxy-agent": "^7.0.6",
